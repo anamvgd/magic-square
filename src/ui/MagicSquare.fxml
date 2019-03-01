@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MagicSquareController">
+   <top>
+      <Pane prefHeight="171.0" prefWidth="770.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="230.0" layoutY="35.0" text="MAGIC SQUARE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="36.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.19047619047619047">
+                     <stops>
+                        <Stop color="#211f90d4" />
+                        <Stop color="#6050a1" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="58.0" layoutY="95.0" text="Welcome to the Magic Square! Generate a square of your preferred dimensions (only odd)">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="120.0" text="in which the numbers of each row and each column will add a magic constant obtained from">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="145.0" text="the number you chose.">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="exceptionField" layoutX="14.0" layoutY="14.0" textFill="#eb1515">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="351.0" prefWidth="264.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="57.0" layoutY="14.0" text="Please introduce your magic">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="39.0" text="number: ">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberField" layoutX="131.0" layoutY="46.0" prefHeight="37.0" prefWidth="44.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="53.0" layoutY="99.0" text="Select the position that you ">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="124.0" text="prefer for the first number (1)">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="55.0" layoutY="226.0" mnemonicParsing="false" onAction="#generateButtonPressed" text="CREATE MAGIC SQUARE" textAlignment="CENTER" textFill="#13206f">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="77.0" layoutY="290.0" text="Your magic constant is: ">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mcField" layoutX="131.0" layoutY="315.0" textAlignment="CENTER" textFill="#2d259e">
+               <font>
+                  <Font name="Segoe UI Black Italic" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="positionField" editable="false" focusTraversable="false" layoutX="104.0" layoutY="157.0" prefHeight="42.0" prefWidth="88.0" text="Top Row">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane prefHeight="130.0" prefWidth="507.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
